@@ -1,0 +1,365 @@
+.header {
+    min-height: 100vh;
+    background: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+  }
+  
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos del botón cubo 3D */
+  .nav-links .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em 1em;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #d4af37;
+    letter-spacing: 0.1em;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    text-decoration: none;
+    position: relative;
+    width: auto;
+    min-width: fit-content;
+  }
+
+  .nav-links .cube {
+    position: relative;
+    transition: all 0.5s;
+  }
+
+  .nav-links .cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: #d4af37;
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+    transition: all 0.4s;
+  }
+
+  .nav-links .cube .bg-top .bg-inner {
+    bottom: 0;
+  }
+
+  .nav-links .cube .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: #d4af37;
+    transition: all 0.4s;
+  }
+
+  .nav-links .cube .bg-right {
+    position: absolute;
+    background: #d4af37;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+    transition: all 0.4s;
+  }
+
+  .nav-links .cube .bg-right .bg-inner {
+    left: 0;
+  }
+
+  .nav-links .cube .bg-inner {
+    background: #28282d;
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+  }
+
+  .nav-links .cube .text {
+    position: relative;
+    transition: all 0.4s;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links .cube:hover .bg-inner {
+    background: #d4af37;
+    transition: all 0.4s;
+  }
+
+  .nav-links .cube:hover .text {
+    color: #28282d;
+    transition: all 0.4s;
+  }
+
+  .nav-links .cube:hover .bg-right,
+  .nav-links .cube:hover .bg,
+  .nav-links .cube:hover .bg-top {
+    background: #28282d;
+  }
+
+  .nav-links .cube:active {
+    z-index: 9999;
+    animation: bounce 0.1s linear;
+  }
+
+  @keyframes bounce {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  
+  .hero {
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .highlight {
+    color: #ffd700;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s both;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: white;
+    color: #667eea;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 1s ease 0.4s both;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Terminal Linux/macOS */
+  .header-terminal-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    animation: fadeInUp 1s ease 0.6s both;
+  }
+
+  .terminal-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .terminal_toolbar {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 0 8px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #212121;
+    justify-content: space-between;
+  }
+
+  .butt {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 5px;
+    font-size: 8px;
+    height: 12px;
+    width: 12px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 100%;
+    background: linear-gradient(#7d7871 0%, #595953 100%);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+  }
+
+  .btn-color {
+    background: #ee411a;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+  }
+
+  .btn:focus {
+    outline: none;
+  }
+
+  .butt--exit {
+    background: linear-gradient(#f37458 0%, #de4c12 100%);
+  }
+
+  .add_tab {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0 6px;
+    border-radius: 4px 4px 0 0;
+    border-bottom: none;
+    cursor: pointer;
+  }
+
+  .user {
+    color: #d5d0ce;
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 0;
+  }
+
+  .terminal_body {
+    background: rgba(0, 0, 0, 0.6);
+    height: calc(100% - 30px);
+    padding-top: 2px;
+    margin-top: -1px;
+    font-size: 12px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .terminal_promt {
+    display: flex;
+  }
+
+  .terminal_promt span {
+    margin-left: 4px;
+  }
+
+  .terminal_user {
+    color: #1eff8e;
+  }
+
+  .terminal_location {
+    color: #4878c0;
+  }
+
+  .terminal_bling {
+    color: #dddddd;
+  }
+
+  .terminal_cursor {
+    display: block;
+    height: 14px;
+    width: 5px;
+    margin-left: 10px;
+    animation: curbl 1200ms linear infinite;
+  }
+
+  @keyframes curbl {
+    0% {
+      background: #ffffff;
+    }
+    49% {
+      background: #ffffff;
+    }
+    60% {
+      background: transparent;
+    }
+    99% {
+      background: transparent;
+    }
+    100% {
+      background: #ffffff;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .nav {
+      padding: 1rem;
+    }
+    
+    .nav-links {
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links .btn {
+      font-size: 14px;
+      padding: 0.5em 0.8em;
+    }
+
+    .terminal-container {
+      width: 100%;
+      max-width: 250px;
+      height: 200px;
+    }
+  }

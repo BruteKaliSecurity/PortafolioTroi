@@ -1,0 +1,181 @@
+.about {
+    padding: 5rem 2rem;
+    background: transparent;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fff;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 1rem auto;
+    border-radius: 2px;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ddd;
+  }
+  
+  .about-text p {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Contenedor de tarjetas */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 2rem 0;
+  }
+
+  /* Tarjeta estilo macOS */
+  .mac-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #0d1117;
+    border-radius: 10px;
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  .mac-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .mac-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .mac-header span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .mac-header .red {
+    background-color: #ff5f57;
+  }
+
+  .mac-header .yellow {
+    background-color: #ffbd2e;
+  }
+
+  .mac-header .green {
+    background-color: #28c941;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #e6e6ef;
+    display: block;
+  }
+
+  .card-description {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+  }
+
+  .card-tag {
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 5px;
+    background-color: #0d1117;
+    padding: 4px 8px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    color: #dcdcdc;
+  }
+
+  .code-editor {
+    background-color: #0d1117;
+    color: #dcdcdc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 5px;
+    padding: 15px;
+    overflow: auto;
+    min-height: 150px;
+    max-height: 150px;
+    border: 1px solid #333;
+  }
+
+  .code-editor::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .code-editor::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+
+  .code-editor pre {
+    margin: 0;
+  }
+
+  .code-editor pre code {
+    white-space: pre-wrap;
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+    
+    .about-text {
+      font-size: 1rem;
+    }
+
+    .cards-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .mac-card {
+      max-width: 100%;
+    }
+  }
